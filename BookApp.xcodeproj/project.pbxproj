@@ -11,6 +11,10 @@
 		04B3D73626FF775A0077E3BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3D73526FF775A0077E3BA /* ContentView.swift */; };
 		04B3D73826FF77870077E3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B3D73726FF77870077E3BA /* Assets.xcassets */; };
 		04B3D73B26FF77870077E3BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04B3D73A26FF77870077E3BA /* Preview Assets.xcassets */; };
+		04B3D770270057A20077E3BA /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = 04B3D76F270057A10077E3BA /* Data.json */; };
+		04B3D773270066610077E3BA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3D772270066610077E3BA /* DataService.swift */; };
+		04B3D778270067350077E3BA /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3D777270067350077E3BA /* Book.swift */; };
+		04B3D77A270067500077E3BA /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B3D7792700674F0077E3BA /* BookModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,10 @@
 		04B3D73726FF77870077E3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04B3D73A26FF77870077E3BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		04B3D73C26FF77870077E3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B3D76F270057A10077E3BA /* Data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		04B3D772270066610077E3BA /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		04B3D777270067350077E3BA /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		04B3D7792700674F0077E3BA /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +60,12 @@
 		04B3D73226FF775A0077E3BA /* BookApp */ = {
 			isa = PBXGroup;
 			children = (
+				04B3D774270066780077E3BA /* Model */,
+				04B3D775270066810077E3BA /* View */,
+				04B3D776270066860077E3BA /* ViewModel */,
+				04B3D7712700663F0077E3BA /* Services */,
+				04B3D76E270057960077E3BA /* Data */,
 				04B3D73326FF775A0077E3BA /* BookAppApp.swift */,
-				04B3D73526FF775A0077E3BA /* ContentView.swift */,
 				04B3D73726FF77870077E3BA /* Assets.xcassets */,
 				04B3D73C26FF77870077E3BA /* Info.plist */,
 				04B3D73926FF77870077E3BA /* Preview Content */,
@@ -67,6 +79,46 @@
 				04B3D73A26FF77870077E3BA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		04B3D76E270057960077E3BA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				04B3D76F270057A10077E3BA /* Data.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		04B3D7712700663F0077E3BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				04B3D772270066610077E3BA /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		04B3D774270066780077E3BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04B3D777270067350077E3BA /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04B3D775270066810077E3BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04B3D73526FF775A0077E3BA /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04B3D776270066860077E3BA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04B3D7792700674F0077E3BA /* BookModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +180,7 @@
 			files = (
 				04B3D73B26FF77870077E3BA /* Preview Assets.xcassets in Resources */,
 				04B3D73826FF77870077E3BA /* Assets.xcassets in Resources */,
+				04B3D770270057A20077E3BA /* Data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +191,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B3D77A270067500077E3BA /* BookModel.swift in Sources */,
+				04B3D778270067350077E3BA /* Book.swift in Sources */,
+				04B3D773270066610077E3BA /* DataService.swift in Sources */,
 				04B3D73626FF775A0077E3BA /* ContentView.swift in Sources */,
 				04B3D73426FF775A0077E3BA /* BookAppApp.swift in Sources */,
 			);
