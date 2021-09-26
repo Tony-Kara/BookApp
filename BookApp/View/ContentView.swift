@@ -19,21 +19,29 @@ struct ContentView: View {
                 
                 ScrollView {
                     
-                    LazyVStack {
+                    LazyVStack(alignment: .leading, spacing: 30) {
                         
-                        ForEach(){
+                        ForEach(model.bookModel){ b in
                             
                             NavigationLink(
-                                destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                                destination: Staging(book: b),
                                 label: {
-                                    /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
+                                    BookPreview(book: b)
                                 })
+                            
+                            
+                            
+                            NavigationLink(destination: EmptyView()) {
+                                EmptyView() }
                         }
+                       // .padding(.top)
                         
                     }
+                    
                 }
                 
             }
+            .navigationTitle("My library")
             
         }
     }
@@ -42,5 +50,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(BookModel())
     }
 }
