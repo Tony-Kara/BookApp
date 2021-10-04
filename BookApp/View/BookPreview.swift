@@ -19,9 +19,21 @@ struct BookPreview: View {
                 
             
             VStack(alignment: .leading, spacing: 10) {
-                Text(book.title)
-                    .font(.title)
-                    .fontWeight(.bold)
+                HStack {
+                    Text(book.title)
+                        .font(.title)
+                        .fontWeight(.bold)
+                    
+                    Spacer()
+                    
+                    if book.isFavourite {
+                        Image(systemName: "star.fill")
+                            .resizable()
+                            .frame(width: 28, height: 28)
+                            .foregroundColor(.yellow)
+                    }
+                }
+               
                 Text(book.author)
                     .italic()
                 Image("cover\(book.id)")

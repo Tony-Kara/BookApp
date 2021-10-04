@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct BookListView: View {
     
     @EnvironmentObject var model: BookModel
     
@@ -31,12 +31,13 @@ struct ContentView: View {
                             
                             
                             
-                            NavigationLink(destination: EmptyView()) {
-                                EmptyView() }
+                           NavigationLink(destination: EmptyView()) {
+                              EmptyView() }
                         }
-                       // .padding(.top)
+                       
                         
                     }
+                     .padding(.top)
                     
                 }
                 
@@ -47,9 +48,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct  BookList_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        BookListView()
             .environmentObject(BookModel())
     }
 }
